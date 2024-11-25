@@ -8,6 +8,32 @@ package Prodotto;
  *
  * @author Giulio
  */
-public class Prodotto {
-    
+
+/*
+Creare una classe Prodotto con due metodi costruttori che inizializzino lo stato dell’oggetto, dotato
+dei seguenti attributi:
+– string proprietario
+– string nomeNegozio
+*/
+
+class Prodotto {
+    private String proprietario;
+    private String nomeNegozio;
+
+    // Primo costruttore
+    public Prodotto(String proprietario, String nomeNegozio) {
+        this.proprietario = proprietario;
+        this.nomeNegozio = nomeNegozio;
+    }
+
+    // Secondo costruttore
+    public Prodotto() {
+        this("Sconosciuto", "Nessun Negozio");
+    }
+
+    @Override // // ridefinisce il metodo in una sottoclasse
+    public String toString() {
+        return "Prodotto [proprietario=" + proprietario + ", nomeNegozio=" + nomeNegozio + "]";
+    }
 }
+

@@ -8,6 +8,33 @@ package Contatore3_moduloN_passoP;
  *
  * @author Giulio
  */
-public class Contatore3_moduloN_passoP {
-    
+
+/*
+Definire una classe Contatore moduloNche permetta di incrementare e decrementare una variabile
+di un passo P fino al raggiungimento del valore N: successivamente il conteggio riparte da 0.
+*/
+
+
+class Contatore3_moduloN_passoP {
+    private int valore = 0;
+    private int limite;
+    private int passo;
+
+    public Contatore3_moduloN_passoP(int limite, int passo) {
+        this.limite = limite;
+        this.passo = passo;
+    }
+
+    public void incrementa() {
+        valore = (valore + passo) % limite;
+    }
+
+    public void decrementa() {
+        valore = (valore - passo + limite) % limite;
+    }
+
+    public int getValore() {
+        return valore;
+    }
 }
+

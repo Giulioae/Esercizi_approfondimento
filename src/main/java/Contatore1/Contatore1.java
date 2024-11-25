@@ -8,6 +8,28 @@ package Contatore1;
  *
  * @author Giulio
  */
-public class Contatore1 {
-    
+
+
+
+/*
+Definire una classe Contatore che permetta di incrementare e decrementare una variabile di una
+singola unità.
+*/
+
+
+class Contatore1 {
+    private int valore;
+
+    public void incrementa() {
+        valore++;
+    }
+
+    public void decrementa() {
+        valore--;
+    }
+
+    public int getValore() {
+        return valore;
+    }
 }
+
